@@ -15,7 +15,7 @@
 ## Features Currently Implemented ✅
 
 ### Core Functionality
-- **Responsive cyberpunk-themed website** following Nexus Flow design guidelines
+- **Responsive professional marketing website** following Digital Trend design guidelines
 - **Comprehensive AI use case database** with 7+ categories covering customer service, marketing, data analysis, operations, HR, website optimisation, and finance
 - **Dynamic pricing system** with tiered pricing for different organisation types
 - **Interactive ROI calculator** showing 1-month, 3-month, and 1-year savings projections
@@ -128,10 +128,11 @@
 
 ### Frontend
 - **Framework**: Hono with JSX rendering
-- **Styling**: Custom CSS with cyberpunk theme inspired by Nexus Flow
+- **Styling**: Custom CSS with professional Digital Trend marketing theme
+- **Colour Scheme**: Purple/blue gradients (#667eea, #764ba2) with clean white layouts
 - **Fonts**: Inter from Google Fonts
 - **Icons**: Emoji-based for cross-platform compatibility
-- **Animations**: CSS transitions and keyframes for smooth interactions
+- **Animations**: CSS transitions and vector-style background animations
 
 ### Backend
 - **Runtime**: Cloudflare Workers (edge computing)

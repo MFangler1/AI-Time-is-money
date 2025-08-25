@@ -1,66 +1,71 @@
-/* Digital Trend Professional Marketing Theme */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ==========================================================================
+   AI TIME IS MONEY - MAIN STYLESHEET
+   Digital Trend Professional Marketing Theme
+   
+   Table of Contents:
+   1. Base Styles - Reset, typography, utilities
+   2. Layout - Background, navigation, footer
+   3. Components - Buttons, cards, forms, modals
+   4. Pages - Section-specific styles
+   ========================================================================== */
+
+/* Import Component Stylesheets */
+@import url('/css/base.css');
+@import url('/css/layout.css');  
+@import url('/css/components.css');
+@import url('/css/pages.css');
+
+/* Custom Additions and Overrides
+   ========================================================================== */
+
+/* Print Styles */
+@media print {
+  .nav-container,
+  .footer,
+  .btn,
+  .matrix-bg {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
 }
 
-body {
-  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #ffffff;
-  color: #333333;
-  line-height: 1.6;
-  overflow-x: hidden;
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    background: #000 !important;
+    border: 2px solid #000 !important;
+  }
+  
+  .btn-secondary {
+    background: #fff !important;
+    color: #000 !important;
+    border: 2px solid #000 !important;
+  }
 }
 
-/* Modern Background with Gradients */
-.matrix-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  opacity: 0.03;
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.matrix-bg::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 107, 107, 0.1) 0%, transparent 50%);
-  animation: floatAnimation 20s ease-in-out infinite;
+/* Focus Styles for Accessibility */
+*:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
 }
 
-.matrix-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(45deg, transparent 40%, rgba(102, 126, 234, 0.02) 50%, transparent 60%),
-    linear-gradient(-45deg, transparent 40%, rgba(118, 75, 162, 0.02) 50%, transparent 60%);
-  background-size: 100px 100px;
-  animation: slideAnimation 25s linear infinite;
-}
-
-@keyframes floatAnimation {
-  0%, 100% { opacity: 0.1; transform: translateY(0px) scale(1); }
-  50% { opacity: 0.2; transform: translateY(-15px) scale(1.01); }
-}
-
-@keyframes slideAnimation {
-  0% { transform: translateX(0) translateY(0); }
-  100% { transform: translateX(100px) translateY(100px); }
+.btn:focus,
+.form-control:focus {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
 }
 
 /* Navigation */

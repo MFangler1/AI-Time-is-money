@@ -9,7 +9,7 @@ const app = new Hono()
 app.use('/api/*', cors())
 
 // Serve static files
-app.use('/static/*', serveStatic({ root: './public' }))
+app.use('/*', serveStatic({ root: './public' }))
 
 app.use(renderer)
 
@@ -161,7 +161,7 @@ app.get('/', (c) => {
         <div className="hero-content">
           <h1 className="hero-title">
             Transform Your Business with 
-            <span className="neon-text"> AI Automation</span>
+            <span className="gradient-text"> AI Automation</span>
           </h1>
           <p className="hero-subtitle">
             Discover how AI can save your SME, solopreneur business, or non-profit organisation 
@@ -182,10 +182,10 @@ app.get('/', (c) => {
             </div>
           </div>
           <div className="hero-cta">
-            <button className="cta-button primary" onclick="scrollToAssessment()">
+            <button className="btn btn-primary btn-large" onclick="scrollToAssessment()">
               Get Your AI Report - £9.99
             </button>
-            <button className="cta-button secondary" onclick="showDemo()">
+            <button className="btn btn-secondary btn-large" onclick="showDemo()">
               See Demo Report
             </button>
           </div>
@@ -195,7 +195,7 @@ app.get('/', (c) => {
       {/* Features Section */}
       <section id="features" className="features-section">
         <div className="section-content">
-          <h2 className="section-title">AI Solutions That <span className="neon-text">Actually Work</span></h2>
+          <h2 className="section-title">AI Solutions That <span className="gradient-text">Actually Work</span></h2>
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon">🤖</div>
@@ -240,7 +240,7 @@ app.get('/', (c) => {
       {/* Pricing Section */}
       <section id="pricing" className="pricing-section">
         <div className="section-content">
-          <h2 className="section-title">Affordable AI for <span className="neon-text">Everyone</span></h2>
+          <h2 className="section-title">Affordable AI for <span className="gradient-text">Everyone</span></h2>
           <div className="pricing-grid">
             <div className="pricing-card">
               <div className="pricing-header">
@@ -260,7 +260,7 @@ app.get('/', (c) => {
                 <div className="feature">✓ 12-Month ROI Projections</div>
                 <div className="feature">✓ Free Website AI Audit</div>
               </div>
-              <button className="pricing-button" onclick="startAssessment('sme')">
+              <button className="btn btn-primary btn-block" onclick="startAssessment('sme')">
                 Get Your Report Now
               </button>
             </div>
@@ -283,7 +283,7 @@ app.get('/', (c) => {
                 <div className="feature">✓ Grant Application Assistance</div>
                 <div className="feature">✓ Community Engagement Tools</div>
               </div>
-              <button className="pricing-button" onclick="startAssessment('nonprofit')">
+              <button className="btn btn-primary btn-block" onclick="startAssessment('nonprofit')">
                 Get Your Report Now
               </button>
             </div>
@@ -294,19 +294,19 @@ app.get('/', (c) => {
       {/* ROI Calculator */}
       <section className="calculator-section">
         <div className="section-content">
-          <h2 className="section-title">Calculate Your <span className="neon-text">AI Savings</span></h2>
+          <h2 className="section-title">Calculate Your <span className="gradient-text">AI Savings</span></h2>
           <div className="calculator-container">
             <div className="calculator-inputs">
               <div className="input-group">
                 <label>Business Type</label>
-                <select id="businessType" onchange="updateCalculator()">
+                <select id="businessType" className="form-control" onchange="updateCalculator()">
                   <option value="sme">SME / Solopreneur</option>
                   <option value="nonprofit">Non-Profit Organisation</option>
                 </select>
               </div>
               <div className="input-group">
                 <label>Number of Employees</label>
-                <input type="range" id="employeeSlider" min="1" max="50" value="5" onchange="updateCalculator()" />
+                <input type="range" id="employeeSlider" className="range-input" min="1" max="50" value="5" onchange="updateCalculator()" />
                 <span id="employeeCount">5</span>
               </div>
             </div>
@@ -334,28 +334,28 @@ app.get('/', (c) => {
       {/* Assessment Form */}
       <section id="assessment" className="assessment-section">
         <div className="section-content">
-          <h2 className="section-title">Get Your <span className="neon-text">AI Assessment</span></h2>
+          <h2 className="section-title">Get Your <span className="gradient-text">AI Assessment</span></h2>
           <form className="assessment-form" id="assessmentForm">
             <div className="form-grid">
               <div className="form-group">
                 <label>Full Name *</label>
-                <input type="text" name="name" required />
+                <input type="text" name="name" className="form-control" required />
               </div>
               <div className="form-group">
                 <label>Company Name</label>
-                <input type="text" name="company" />
+                <input type="text" name="company" className="form-control" />
               </div>
               <div className="form-group">
                 <label>Email Address *</label>
-                <input type="email" name="email" required />
+                <input type="email" name="email" className="form-control" required />
               </div>
               <div className="form-group">
                 <label>Website URL</label>
-                <input type="url" name="website" placeholder="https://your-website.com" />
+                <input type="url" name="website" className="form-control" placeholder="https://your-website.com" />
               </div>
               <div className="form-group full-width">
                 <label>Business Type</label>
-                <select name="businessType">
+                <select name="businessType" className="form-control">
                   <option value="sme">SME / Small Business</option>
                   <option value="solopreneur">Solopreneur</option>
                   <option value="nonprofit">Non-Profit Organisation</option>
@@ -363,7 +363,7 @@ app.get('/', (c) => {
               </div>
               <div className="form-group full-width">
                 <label>Specific AI Needs (Optional)</label>
-                <textarea name="aiNeeds" rows="4" placeholder="Tell us about any specific AI challenges or opportunities you've identified in your business..."></textarea>
+                <textarea name="aiNeeds" rows="4" className="form-control" placeholder="Tell us about any specific AI challenges or opportunities you've identified in your business..."></textarea>
               </div>
               <div className="form-group full-width">
                 <label className="checkbox-label">
@@ -373,10 +373,10 @@ app.get('/', (c) => {
               </div>
             </div>
             <div className="form-actions">
-              <button type="button" className="btn-demo" onclick="showDemo()">
+              <button type="button" className="btn btn-secondary btn-large" onclick="showDemo()">
                 View Demo Report First
               </button>
-              <button type="submit" className="btn-submit">
+              <button type="submit" className="btn btn-primary btn-large">
                 Get My AI Report - £9.99
               </button>
             </div>
@@ -441,7 +441,7 @@ app.get('/', (c) => {
               <p><strong>Month 3:</strong> Add financial analysis tools</p>
             </div>
           </div>
-          <button className="btn-get-full-report" onclick="scrollToAssessment()">
+          <button className="btn btn-primary btn-large btn-block" onclick="scrollToAssessment()">
             Get Your Full Personalised Report
           </button>
         </div>

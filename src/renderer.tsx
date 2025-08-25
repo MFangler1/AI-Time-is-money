@@ -27,7 +27,7 @@ export const renderer = jsxRenderer(({ children }) => {
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
         
         {/* Styles */}
-        <link href="/static/styles.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet" />
         
         {/* Favicon */}
         <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
@@ -57,7 +57,7 @@ export const renderer = jsxRenderer(({ children }) => {
         {children}
         
         {/* JavaScript */}
-        <script src="/static/app.js"></script>
+        <script src="/js/main.js"></script>
         
         {/* Analytics placeholder */}
         <script>
