@@ -8,6 +8,7 @@
 - **Social Mission**: Promote affordable AI solutions for social good
 
 ## Live URLs
+- **GitHub Repository**: https://github.com/MFangler1/AI-Time-is-money
 - **Development**: https://3000-ibu5mmyzqg2y7eknxdm0f-6532622b.e2b.dev
 - **Production**: (To be deployed to Cloudflare Pages)
 - **Health Check**: https://3000-ibu5mmyzqg2y7eknxdm0f-6532622b.e2b.dev/api/calculate-savings?type=sme&employees=5
@@ -128,11 +129,13 @@
 
 ### Frontend
 - **Framework**: Hono with JSX rendering
-- **Styling**: Custom CSS with professional Digital Trend marketing theme
+- **Styling**: Modular CSS architecture with professional Digital Trend marketing theme
+- **CSS Structure**: Organized into base.css, layout.css, components.css, pages.css
 - **Colour Scheme**: Purple/blue gradients (#667eea, #764ba2) with clean white layouts
 - **Fonts**: Inter from Google Fonts
 - **Icons**: Emoji-based for cross-platform compatibility
 - **Animations**: CSS transitions and vector-style background animations
+- **File Organization**: Structured /css, /js, /images, /assets directories
 
 ### Backend
 - **Runtime**: Cloudflare Workers (edge computing)
