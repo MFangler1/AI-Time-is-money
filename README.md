@@ -9,7 +9,8 @@
 
 ## Live URLs
 - **GitHub Repository**: https://github.com/MFangler1/AI-Time-is-money
-- **Development**: https://3000-ibu5mmyzqg2y7eknxdm0f-6532622b.e2b.dev
+- **GitHub Pages**: https://mfangler1.github.io/AI-Time-is-money/ (Static version)
+- **Development**: https://3000-ibu5mmyzqg2y7eknxdm0f-6532622b.e2b.dev (Hono framework)
 - **Production**: (To be deployed to Cloudflare Pages)
 - **Health Check**: https://3000-ibu5mmyzqg2y7eknxdm0f-6532622b.e2b.dev/api/calculate-savings?type=sme&employees=5
 
